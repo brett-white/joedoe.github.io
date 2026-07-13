@@ -36,4 +36,25 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', updateTheme);
   updateTheme();
+
+  const toggle = header.querySelector('.nav-toggle');
+  if (toggle) {
+    const closeMenu = () => {
+      header.classList.remove('menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+
+    toggle.addEventListener('click', () => {
+      const isOpen = header.classList.toggle('menu-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    header.querySelectorAll('.nav-links a, .nav-cta a').forEach((link) => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 760) closeMenu();
+    });
+  }
 })();
