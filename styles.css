@@ -151,7 +151,7 @@ header.site {
   width: 100%;
   max-width: 380px;
   aspect-ratio: 1.586 / 1;
-  background: linear-gradient(135deg, #ffee66, #ffd93d);
+  background: var(--yellow);
   border-radius: 22px;
   box-shadow: 0 30px 70px rgba(0,0,0,.35);
 }
