@@ -74,7 +74,7 @@ p { margin: 0 0 1em; color: var(--muted); }
   font-size: 15px;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  transition: transform .15s ease-in-out, box-shadow .15s ease, background .15s ease-in-out;
   white-space: nowrap;
 }
 .btn:hover { transform: translateY(-1px); }
@@ -92,10 +92,11 @@ header.site {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255,255,255,.92);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
-  transition: background-color .25s ease, border-color .25s ease;
+  background: #fff;
+  /* background: rgba(0,0,102,.92); */
+  /* border-bottom: 1px solid var(--line); */
+  border-bottom: none;
+  transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
 }
 .nav {
   display: flex;
@@ -224,7 +225,7 @@ header.site.on-dark .nav-toggle span { background: #fff; }
 }
 .wink-icon--card {
   position: absolute;
-  right: 4%;
+  right: 8%;
   top: 50%;
   transform: translateY(-50%);
   width: 38%;
@@ -239,8 +240,8 @@ header.site.on-dark .nav-toggle span { background: #fff; }
 
 /* header over a dark (navy) section */
 header.site.on-dark {
-  background: rgba(0,0,102,.92);
-  border-bottom-color: rgba(255,255,255,.12);
+  background: var(--navy);
+  /* border-bottom-color: rgba(255,255,255,.12); */
 }
 header.site.on-dark .nav .logo svg path { fill: #fff; }
 header.site.on-dark .nav-links a.navlink { color: rgba(255,255,255,.85); }
@@ -252,7 +253,8 @@ header.site.on-dark .nav-cta .btn-dark:hover { box-shadow: 0 8px 24px rgba(255,2
 
 /* ---------- hero ---------- */
 .hero {
-  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-soft) 100%);
+  /* background: linear-gradient(180deg, var(--navy) 0%, var(--navy-soft) 100%); */
+  background: var(--navy);
   color: #fff;
   padding: 96px 0 80px;
   position: relative;
@@ -260,6 +262,7 @@ header.site.on-dark .nav-cta .btn-dark:hover { box-shadow: 0 8px 24px rgba(255,2
 }
 .hero::after {
   content: "";
+  visibility: hidden;
   position: absolute;
   right: -120px;
   top: -120px;
