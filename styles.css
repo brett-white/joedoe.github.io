@@ -97,6 +97,8 @@ header.site {
   /* border-bottom: 1px solid var(--line); */
   border-bottom: none;
   transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .nav {
   display: flex;
