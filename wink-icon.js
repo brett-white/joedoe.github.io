@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
 
   document.querySelectorAll('canvas[data-rive-wink]').forEach(function (canvas) {
     var r = new rive.Rive({
-      src: 'assets/joedoe-wink.riv',
+      src: '/assets/joedoe-wink.riv',
       canvas: canvas,
       autoplay: true,
       onLoad: function () {

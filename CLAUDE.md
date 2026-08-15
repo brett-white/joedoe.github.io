@@ -27,7 +27,7 @@ There are no automated tests. Verify changes by opening the page in a browser an
 - `styles.css` — single shared stylesheet for both pages.
 - `assets/` — brand SVGs (icon, stacked logo, stacked wordmark, wide wordmark).
 
-There is no templating layer: the header nav and footer markup are duplicated by hand in both HTML files, including an inline copy of the wordmark SVG in each (rather than referencing the file in `assets/`). When editing the logo, nav links, or footer, update both `index.html` and `partners/index.html` to keep them in sync. Note `partners/index.html` sits one directory deeper, so its relative asset/link paths (`styles.css`, `assets/`, `../index.html`, etc.) are prefixed with `../` where `index.html`'s are not.
+There is no templating layer: the header nav and footer markup are duplicated by hand in both HTML files, including an inline copy of the wordmark SVG in each (rather than referencing the file in `assets/`). When editing the logo, nav links, or footer, update both `index.html` and `partners/index.html` to keep them in sync. Note `partners/index.html` sits one directory deeper, so its relative asset paths (`styles.css`, `assets/`, `wink-icon.js`, etc.) are prefixed with `../` where `index.html`'s are not. Links to whole pages (the homepage, the partners page) use root-absolute paths (`/`, `/partners/`) instead, so they resolve the same from either file and never expose `index.html` in the URL.
 
 ### Brand system (`styles.css`)
 
@@ -35,4 +35,4 @@ CSS custom properties defined on `:root` are the source of truth for brand color
 
 ### Navigation model
 
-Both pages share one nav structure but link to each other for cross-page sections, e.g. `partners/index.html` links back to `../index.html#pricing`. When renaming or removing a section `id` in one file, check the other file for cross-page anchor links pointing at it (`grep -rn 'href="\.\./index.html#' partners/index.html` / `grep -rn 'href="partners/' index.html`).
+Both pages share one nav structure but link to each other for cross-page sections, e.g. `partners/index.html` links back to `/#pricing`. When renaming or removing a section `id` in one file, check the other file for cross-page anchor links pointing at it (`grep -rn 'href="/#' partners/index.html` / `grep -rn 'href="partners/' index.html`).
