@@ -31,7 +31,17 @@ There is no templating layer: the header nav and footer markup are duplicated by
 
 ### Brand system (`styles.css`)
 
-CSS custom properties defined on `:root` are the source of truth for brand color — `--navy` (#000066) and `--yellow` (#ffee66) are the two-color semantic system (navy = employer spend, yellow = personal spend); don't hardcode hex values in new markup, use the variables. Font is Roboto, loaded from Google Fonts in the `<head>` of each page (not self-hosted).
+CSS custom properties defined on `:root` are the source of truth for brand color — each color has one deliberate job, don't hardcode hex values in new markup, use the variables:
+
+- `--brand-indigo` (#4F46E5) — product / primary actions: buttons, links, the Solution & How It Works sections.
+- `--brand-rose-*` (#F43F5E soft / #E11D48 text) — attention: the Problem section, the gradient CTA banner. Two variants exist because the soft value fails WCAG AA at small text sizes; use `-text` for any small/body text and `-soft` only for large decorative use (36px+, gradients).
+- `--brand-yellow` (#FFD028) — reserved for the JoeDoe card artwork and the "Most Popular" pricing badge only, not general decoration.
+- `--brand-teal-*` (#0D9488 soft / #0F766E text) — data & metrics only: the comparison table's JoeDoe column, TAM/SAM/SOM stat cards. Same soft/text split as rose, for the same contrast reason.
+- `--navy-900` / `--navy-800` — the dark security section and footer.
+
+Fonts are Outfit (`--font-display`, headings), Inter (`--font-body`, copy), and JetBrains Mono (`--font-mono`, eyebrow labels/tags) — loaded from Google Fonts in the `<head>` of each page (not self-hosted). See [STYLE-GUIDE.md](STYLE-GUIDE.md) for the full contrast audit and rationale behind each color's scope.
+
+The animated mascot (hero card, both pages) renders via `wink-icon.js` against the Rive runtime and `assets/joedoe-wink.riv` — not a static image. It's positioned with `.wink-icon--card` inside the ring frame drawn into the card SVG. When editing the hero card markup, keep the ring frame's inner-circle geometry (center/radius in the SVG) in sync with `.wink-icon--card`'s left/top/width/height percentages in `styles.css`, or the animation will drift out of the frame.
 
 ### Navigation model
 

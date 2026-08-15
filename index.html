@@ -1,200 +1,304 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JoeDoe — The Never-Decline Corporate Stipend Platform</title>
-<meta name="description" content="JoeDoe is the never-decline corporate stipend platform. Ring-fenced employer budgets, zero merchant friction, and zero-receipt audit trails — powered by the Never-Decline Engine.">
+<meta name="description" content="The first never-decline corporate stipend platform. Works at any card terminal, anywhere — no merchant contracts, no new hardware, no setup.">
 <link rel="icon" href="assets/joedoe-icon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="mask-icon" href="safari-pinned-tab.svg" color="#000066">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#4f46e5">
 <link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#000066">
+<meta name="theme-color" content="#4f46e5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="site on-dark">
-  <div class="nav">
-    <a href="/" class="logo">
-      <svg viewBox="0 0 388 72" xmlns="http://www.w3.org/2000/svg" style="height:26px"><path d="M54 0V45C54 59.9117 41.9117 72 27 72C12.0883 72 0 59.9117 0 45V40H16V45C16 51.0751 20.9249 56 27 56C33.0751 56 38 51.0751 38 45V16H16V0H54ZM98 0C117.882 0 134 16.1177 134 36C134 55.8823 117.882 72 98 72C78.1178 72 62 55.8823 62 36C62 16.1177 78.1178 0 98 0ZM190 16H158V28H182V44H158V56H190V72H142V0H190V16ZM220 0C237.673 0 252 14.3269 252 32V40C252 57.6731 237.673 72 220 72H198V0H220ZM296 0C315.882 0 332 16.1177 332 36C332 55.8823 315.882 72 296 72C276.118 72 260 55.8823 260 36C260 16.1177 276.118 0 296 0ZM388 16H356V28H380V44H356V56H388V72H340V0H388V16ZM98 16C86.9543 16 78 24.9543 78 36C78 47.0457 86.9543 56 98 56C109.046 56 118 47.0457 118 36C118 24.9543 109.046 16 98 16ZM214 56H220C228.837 56 236 48.8366 236 40V32C236 23.1634 228.837 16 220 16H214V56ZM296 16C284.954 16 276 24.9543 276 36C276 47.0457 284.954 56 296 56C307.046 56 316 47.0457 316 36C316 24.9543 307.046 16 296 16Z" fill="#000066"/></svg>
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 4 14 11 14 10 22 20 10 13 10 13 2"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2.5"/><path d="M7.5 11V7.5a4.5 4.5 0 0 1 9 0V11"/><circle cx="12" cy="16" r="1.6" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="6" y1="14.5" x2="11" y2="14.5"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="20" x2="5" y2="12"/><line x1="12" y1="20" x2="12" y2="6"/><line x1="19" y1="20" x2="19" y2="15"/><line x1="3" y1="21.5" x2="21" y2="21.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.6 3.1 7.9 7.5 9 4.4-1.1 7.5-4.4 7.5-9V6L12 3Z"/></symbol>
+  <symbol id="i-eyeoff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 5.2A10.6 10.6 0 0 1 12 5c5.5 0 9 4.5 10 7-0.5 1.2-1.6 3-3.3 4.5M6.6 6.6C4.5 8 3.2 10 2 12c1 2.5 4.5 7 10 7 1.4 0 2.7-.3 3.9-.8"/><path d="M9.9 10a2.5 2.5 0 0 0 3.5 3.5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="7.5" x2="12" y2="13"/><circle cx="12" cy="16.3" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-2.5-1.6L13 21l-2.5-1.6L8 21l-2-1.6V3Z"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="9" y1="12" x2="15" y2="12"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8h12v6.5a4.5 4.5 0 0 1-4.5 4.5H9a4.5 4.5 0 0 1-4.5-4.5V8Z"/><path d="M16.5 9.5H18a2.7 2.7 0 0 1 0 5.4h-1.5"/><line x1="4" y1="21" x2="17.5" y2="21"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12.5 9.5 18 20 6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M3 6.5 12 13l9-6.5"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18.5h.01"/><path d="M8.5 15a5 5 0 0 1 7 0"/><path d="M5 11.5a10 10 0 0 1 14 0"/></symbol>
+  <symbol id="i-x-eye" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="logo" aria-label="JoeDoe home">
+      <svg class="logo-mark" viewBox="0 0 151 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M21 0V17.5C21 23.299 16.299 28 10.5 28C4.70101 28 0 23.299 0 17.5V15.5557H6.22266V17.5C6.22266 19.8626 8.13745 21.7773 10.5 21.7773C12.8626 21.7773 14.7773 19.8626 14.7773 17.5V6.22266H6.22266V0H21ZM38.1113 0C45.8432 0.000117382 52.1113 6.26809 52.1113 14C52.1113 21.7319 45.8432 27.9999 38.1113 28C30.3793 28 24.1113 21.732 24.1113 14C24.1113 6.26801 30.3793 0 38.1113 0ZM73.8887 6.22266H61.4443V10.8887H70.7773V17.1113H61.4443V21.7773H73.8887V28H55.2227V0H73.8887V6.22266ZM85.5557 0C92.4285 5.85622e-05 97.9999 5.57155 98 12.4443V15.5557C97.9999 22.4285 92.4285 27.9999 85.5557 28H77V0H85.5557ZM115.111 0C122.843 0.000119444 129.111 6.26809 129.111 14C129.111 21.7319 122.843 27.9999 115.111 28C107.379 28 101.111 21.732 101.111 14C101.111 6.26801 107.379 0 115.111 0ZM150.889 6.22266H138.444V10.8887H147.777V17.1113H138.444V21.7773H150.889V28H132.223V0H150.889V6.22266ZM38.1113 6.22266C33.8158 6.22266 30.333 9.70445 30.333 14C30.333 18.2955 33.8158 21.7773 38.1113 21.7773C42.4068 21.7772 45.8887 18.2955 45.8887 14C45.8887 9.70452 42.4068 6.22277 38.1113 6.22266ZM83.2227 21.7773H85.5557C88.992 21.7773 91.7773 18.992 91.7773 15.5557V12.4443C91.7773 9.00798 88.992 6.22271 85.5557 6.22266H83.2227V21.7773ZM115.111 6.22266C110.816 6.22266 107.333 9.70445 107.333 14C107.333 18.2955 110.816 21.7773 115.111 21.7773C119.407 21.7772 122.889 18.2955 122.889 14C122.889 9.70453 119.407 6.22278 115.111 6.22266Z" fill="currentColor"/>
+      </svg>
     </a>
-    <nav class="nav-links">
-      <a class="navlink" href="#problem">The Problem</a>
-      <a class="navlink" href="#solution">How It Works</a>
-      <a class="navlink" href="#security">Security</a>
-      <a class="navlink" href="#pricing">Pricing</a>
-      <a class="navlink" href="partners/">Partners &amp; Investors</a>
-    </nav>
-    <div class="nav-cta">
-      <a class="btn btn-ghost" href="#waitlist">Log in</a>
-      <a class="btn btn-dark" href="#waitlist">Get JoeDoe</a>
+    <div class="nav-panel" id="navPanel">
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#problem">The Problem</a>
+        <a href="#solution">How It Works</a>
+        <a href="#security">Security</a>
+        <a href="#pricing">Pricing</a>
+        <a href="/partners/">Partners &amp; Investors</a>
+      </nav>
+      <div class="nav-right">
+        <a href="#waitlist" class="nav-login">Log in</a>
+        <a href="#waitlist" class="btn btn-primary">Get JoeDoe</a>
+      </div>
     </div>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navPanel">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
   </div>
 </header>
+<script>
+  (function () {
+    var btn = document.getElementById('navToggle');
+    var panel = document.getElementById('navPanel');
+    if (!btn || !panel) return;
+    btn.addEventListener('click', function () {
+      var open = panel.classList.toggle('mobile-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    panel.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') { panel.classList.remove('mobile-open'); btn.setAttribute('aria-expanded', 'false'); }
+    });
+  })();
+</script>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-grid">
+<!-- ================= HERO ================= -->
+<section class="hero" style="padding-top:64px;">
+  <div class="wrap">
     <div>
-      <span class="eyebrow">Now in Closed Beta · Patent Pending</span>
-      <h1>Smart Dough<br>for the <span class="hl">Average Joe.</span></h1>
-      <p class="lead">The first never-decline corporate stipend platform. Works at any card terminal, anywhere — no merchant contracts, no new hardware, no setup.</p>
+      <span class="hero-tag"><span class="pulse"></span> Now in Closed Beta · Patent Pending</span>
+      <h1>Smart Dough for the <span class="accent">Average Joe.</span></h1>
+      <p class="lede">The first never-decline corporate stipend platform. Works at any card terminal, anywhere — no merchant contracts, no new hardware, no setup.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#waitlist">Request a Demo</a>
-        <a class="btn btn-outline" href="#solution">See How It Works →</a>
+        <a href="#waitlist" class="btn btn-primary">Request a Demo</a>
+        <a href="#solution" class="btn btn-text">See How It Works <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><b>Instant</b><span>Approval, every time</span></div>
-        <div class="stat"><b>Zero</b><span>Merchant contracts required</span></div>
-        <div class="stat"><b>100%</b><span>Approval rate at the register</span></div>
+      <div class="stat-row">
+        <div class="stat-pill"><div class="num">Instant</div><div class="label">Approval, every time</div></div>
+        <div class="stat-pill"><div class="num">Zero</div><div class="label">Merchant contracts required</div></div>
+        <div class="stat-pill"><div class="num">100%</div><div class="label">Approval rate at the register</div></div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="vcard">
-        <svg class="vcard-logo" viewBox="0 0 374 160" xmlns="http://www.w3.org/2000/svg"><path d="M206 88C223.673 88 238 102.327 238 120V128C238 145.673 223.673 160 206 160H184V88H206ZM282 88C301.882 88 318 104.118 318 124C318 143.882 301.882 160 282 160C262.118 160 246 143.882 246 124C246 104.118 262.118 88 282 88ZM374 104H342V116H366V132H342V144H374V160H326V88H374V104ZM200 144H206C214.837 144 222 136.837 222 128V120C222 111.163 214.837 104 206 104H200V144ZM282 104C270.954 104 262 112.954 262 124C262 135.046 270.954 144 282 144C293.046 144 302 135.046 302 124C302 112.954 293.046 104 282 104ZM238 0V45C238 59.9117 225.912 72 211 72C196.088 72 184 59.9117 184 45V40H200V45C200 51.0751 204.925 56 211 56C217.075 56 222 51.0751 222 45V16H200V0H238ZM282 0C301.882 0 318 16.1177 318 36C318 55.8823 301.882 72 282 72C262.118 72 246 55.8823 246 36C246 16.1177 262.118 0 282 0ZM374 16H342V28H366V44H342V56H374V72H326V0H374V16ZM282 16C270.954 16 262 24.9543 262 36C262 47.0457 270.954 56 282 56C293.046 56 302 47.0457 302 36C302 24.9543 293.046 16 282 16Z" fill="#000066"/><path d="M80 0C124.183 0 160 35.8172 160 80C160 124.183 124.183 160 80 160C35.8172 160 0 124.183 0 80C2.06165e-06 35.8172 35.8172 2.0619e-06 80 0ZM80 17.7773C45.6356 17.7773 17.7773 45.6356 17.7773 80C17.7773 114.364 45.6356 142.223 80 142.223C114.364 142.223 142.223 114.364 142.223 80C142.223 45.6356 114.364 17.7773 80 17.7773ZM124.498 100.248C122.082 105.558 118.725 110.413 114.569 114.569C108.501 120.638 100.943 125.002 92.6533 127.223L90.3525 118.637C97.1346 116.819 103.319 113.25 108.284 108.285C111.889 104.68 114.759 100.431 116.756 95.7783L124.498 100.248ZM71.1113 60L60 71.1104L71.1113 82.2227L64.4443 88.8887L53.333 77.7773L42.2227 88.8887L35.5557 82.2227L46.666 71.1104L35.5557 60L42.2227 53.333L53.333 64.4434L64.4443 53.333L71.1113 60ZM127 76H85V66H127V76Z" fill="#000066"/><path d="M126.967 94C121.401 112.701 104.975 126.723 85 128.747V118.682C99.4089 116.838 111.357 107.131 116.409 94H126.967Z" fill="#000066"/></svg>
-        <div class="vcard-pan">•••• 5042</div>
+    <div class="card-scene">
+      <div class="card-visual">
+        <svg viewBox="0 0 464 370" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="JoeDoe virtual card, number ending 5042, with the JoeDoe mascot mark">
+          <g opacity="0.1">
+            <rect x="71.167" width="400" height="250" rx="24" transform="rotate(15 71.167 0)" fill="#4F46E5"/>
+          </g>
+          <g filter="url(#filter0_d_11_58)">
+            <rect x="32" y="71.5049" width="400" height="250" rx="24" fill="#FFD028"/>
+            <path d="M71 97.5049V110.005C71 114.147 67.6421 117.505 63.5 117.505C59.3579 117.505 56 114.147 56 110.005V108.616H60.4443V110.005C60.4443 111.692 61.8125 113.061 63.5 113.061C65.1875 113.061 66.5557 111.692 66.5557 110.005V101.949H60.4443V97.5049H71ZM83.2227 97.5049C88.7453 97.5051 93.2227 101.982 93.2227 107.505C93.2227 113.028 88.7453 117.505 83.2227 117.505C77.6998 117.505 73.2227 113.028 73.2227 107.505C73.2227 101.982 77.6998 97.5049 83.2227 97.5049ZM108.777 101.949H99.8887V105.282H106.556V109.728H99.8887V113.061H108.777V117.505H95.4443V97.5049H108.777V101.949ZM117.111 97.5049C122.02 97.505 126 101.485 126 106.394V108.616C126 113.525 122.02 117.505 117.111 117.505H111V97.5049H117.111ZM138.223 97.5049C143.745 97.5051 148.223 101.982 148.223 107.505C148.223 113.028 143.745 117.505 138.223 117.505C132.7 117.505 128.223 113.028 128.223 107.505C128.223 101.982 132.7 97.5049 138.223 97.5049ZM163.777 101.949H154.889V105.282H161.556V109.728H154.889V113.061H163.777V117.505H150.444V97.5049H163.777V101.949ZM83.2227 101.949C80.1544 101.949 77.667 104.437 77.667 107.505C77.667 110.573 80.1544 113.061 83.2227 113.061C86.2907 113.06 88.7773 110.573 88.7773 107.505C88.7773 104.437 86.2907 101.949 83.2227 101.949ZM115.444 113.061H117.111C119.566 113.06 121.556 111.071 121.556 108.616V106.394C121.556 103.939 119.566 101.949 117.111 101.949H115.444V113.061ZM138.223 101.949C135.154 101.949 132.667 104.437 132.667 107.505C132.667 110.573 135.154 113.061 138.223 113.061C141.291 113.06 143.777 110.573 143.777 107.505C143.777 104.437 141.291 101.949 138.223 101.949Z" fill="#3730A3"/>
+            <g clip-path="url(#clip0_11_58)">
+              <path d="M389 107.505L389 107.519M398.998 97.5049C401.563 100.175 403 103.766 403 107.505C403 111.244 401.563 114.834 398.998 117.505M393.999 102.505C395.282 103.84 396 105.635 396 107.505C396 109.375 395.282 111.17 393.999 112.505" stroke="#3730A3" stroke-width="4" stroke-linecap="round"/>
+            </g>
+            <path d="M60.8 289.657C60.4267 289.657 60.08 289.566 59.76 289.385C59.4507 289.204 59.2053 288.958 59.024 288.649C58.8427 288.34 58.752 287.993 58.752 287.609C58.752 287.236 58.8427 286.9 59.024 286.601C59.2053 286.292 59.4507 286.052 59.76 285.881C60.08 285.7 60.4267 285.609 60.8 285.609C61.184 285.609 61.5307 285.7 61.84 285.881C62.1493 286.052 62.3947 286.292 62.576 286.601C62.7573 286.9 62.848 287.236 62.848 287.609C62.848 287.993 62.7573 288.34 62.576 288.649C62.3947 288.958 62.1493 289.204 61.84 289.385C61.5307 289.566 61.184 289.657 60.8 289.657ZM70.3938 289.657C70.0204 289.657 69.6738 289.566 69.3538 289.385C69.0444 289.204 68.7991 288.958 68.6178 288.649C68.4364 288.34 68.3458 287.993 68.3458 287.609C68.3458 287.236 68.4364 286.9 68.6178 286.601C68.7991 286.292 69.0444 286.052 69.3538 285.881C69.6738 285.7 70.0204 285.609 70.3938 285.609C70.7778 285.609 71.1244 285.7 71.4338 285.881C71.7431 286.052 71.9884 286.292 72.1698 286.601C72.3511 286.9 72.4418 287.236 72.4418 287.609C72.4418 287.993 72.3511 288.34 72.1698 288.649C71.9884 288.958 71.7431 289.204 71.4338 289.385C71.1244 289.566 70.7778 289.657 70.3938 289.657ZM79.9875 289.657C79.6142 289.657 79.2675 289.566 78.9475 289.385C78.6382 289.204 78.3928 288.958 78.2115 288.649C78.0302 288.34 77.9395 287.993 77.9395 287.609C77.9395 287.236 78.0302 286.9 78.2115 286.601C78.3928 286.292 78.6382 286.052 78.9475 285.881C79.2675 285.7 79.6142 285.609 79.9875 285.609C80.3715 285.609 80.7182 285.7 81.0275 285.881C81.3368 286.052 81.5822 286.292 81.7635 286.601C81.9448 286.9 82.0355 287.236 82.0355 287.609C82.0355 287.993 81.9448 288.34 81.7635 288.649C81.5822 288.958 81.3368 289.204 81.0275 289.385C80.7182 289.566 80.3715 289.657 79.9875 289.657ZM89.5813 289.657C89.2079 289.657 88.8613 289.566 88.5413 289.385C88.2319 289.204 87.9866 288.958 87.8053 288.649C87.6239 288.34 87.5333 287.993 87.5333 287.609C87.5333 287.236 87.6239 286.9 87.8053 286.601C87.9866 286.292 88.2319 286.052 88.5413 285.881C88.8613 285.7 89.2079 285.609 89.5813 285.609C89.9653 285.609 90.3119 285.7 90.6213 285.881C90.9306 286.052 91.1759 286.292 91.3573 286.601C91.5386 286.9 91.6293 287.236 91.6293 287.609C91.6293 287.993 91.5386 288.34 91.3573 288.649C91.1759 288.958 90.9306 289.204 90.6213 289.385C90.3119 289.566 89.9653 289.657 89.5813 289.657ZM108.753 292.761C107.974 292.761 107.297 292.622 106.721 292.345C106.155 292.057 105.707 291.668 105.377 291.177C105.046 290.686 104.854 290.132 104.801 289.513L106.849 289.385C106.923 289.908 107.121 290.302 107.441 290.569C107.771 290.836 108.209 290.969 108.753 290.969C109.35 290.969 109.819 290.782 110.161 290.409C110.513 290.036 110.689 289.502 110.689 288.809C110.689 288.35 110.609 287.956 110.449 287.625C110.299 287.294 110.081 287.044 109.793 286.873C109.505 286.702 109.163 286.617 108.769 286.617C108.385 286.617 108.033 286.713 107.713 286.905C107.393 287.097 107.163 287.358 107.025 287.689L104.961 287.609L105.681 281.145H112.161V282.969H107.345L106.913 286.617L106.497 286.393C106.667 286.073 106.886 285.806 107.153 285.593C107.419 285.38 107.718 285.22 108.049 285.113C108.39 284.996 108.737 284.937 109.089 284.937C109.835 284.937 110.481 285.108 111.025 285.449C111.569 285.78 111.99 286.238 112.289 286.825C112.587 287.401 112.737 288.062 112.737 288.809C112.737 289.588 112.571 290.276 112.241 290.873C111.91 291.47 111.441 291.934 110.833 292.265C110.235 292.596 109.542 292.761 108.753 292.761ZM115.595 290.729L119.851 282.809L121.131 282.921L116.875 290.841L115.595 290.729ZM118.363 292.761C117.52 292.761 116.795 292.521 116.187 292.041C115.579 291.561 115.109 290.878 114.779 289.993C114.459 289.108 114.299 288.057 114.299 286.841C114.299 285.614 114.459 284.558 114.779 283.673C115.109 282.788 115.579 282.105 116.187 281.625C116.795 281.134 117.52 280.889 118.363 280.889C119.216 280.889 119.941 281.134 120.539 281.625C121.147 282.105 121.611 282.788 121.931 283.673C122.261 284.558 122.427 285.614 122.427 286.841C122.427 288.057 122.261 289.108 121.931 289.993C121.611 290.878 121.147 291.561 120.539 292.041C119.941 292.521 119.216 292.761 118.363 292.761ZM118.363 290.969C118.789 290.969 119.152 290.814 119.451 290.505C119.749 290.185 119.979 289.716 120.139 289.097C120.299 288.478 120.379 287.726 120.379 286.841C120.379 285.934 120.299 285.177 120.139 284.569C119.979 283.95 119.749 283.481 119.451 283.161C119.152 282.841 118.789 282.681 118.363 282.681C117.947 282.681 117.584 282.841 117.275 283.161C116.976 283.481 116.747 283.95 116.587 284.569C116.427 285.177 116.347 285.934 116.347 286.841C116.347 287.726 116.427 288.478 116.587 289.097C116.747 289.716 116.976 290.185 117.275 290.505C117.584 290.814 117.947 290.969 118.363 290.969ZM128.916 292.505V290.169H123.668V288.505L128.66 281.145H130.884V288.409H132.244V290.169H130.884V292.505H128.916ZM125.556 288.409H128.916V283.689L125.556 288.409ZM133.486 292.505C133.486 291.62 133.609 290.841 133.854 290.169C134.099 289.486 134.526 288.857 135.134 288.281C135.742 287.694 136.59 287.118 137.678 286.553C138.105 286.329 138.457 286.116 138.734 285.913C139.011 285.71 139.219 285.486 139.358 285.241C139.497 284.996 139.566 284.692 139.566 284.329C139.566 283.998 139.497 283.71 139.358 283.465C139.23 283.22 139.033 283.028 138.766 282.889C138.499 282.75 138.169 282.681 137.774 282.681C137.123 282.681 136.622 282.857 136.27 283.209C135.918 283.561 135.694 284.068 135.598 284.729L133.534 284.617C133.651 283.476 134.073 282.569 134.798 281.897C135.523 281.225 136.526 280.889 137.806 280.889C138.627 280.889 139.321 281.028 139.886 281.305C140.451 281.582 140.878 281.977 141.166 282.489C141.454 282.99 141.598 283.572 141.598 284.233C141.598 284.83 141.502 285.348 141.31 285.785C141.118 286.212 140.798 286.612 140.35 286.985C139.913 287.348 139.315 287.732 138.558 288.137C137.918 288.478 137.395 288.804 136.99 289.113C136.595 289.412 136.302 289.694 136.11 289.961C135.918 290.217 135.811 290.457 135.79 290.681H141.614V292.505H133.486Z" fill="#3730A3"/>
+          </g>
+          <defs>
+            <filter id="filter0_d_11_58" x="0" y="55.5049" width="464" height="314" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+              <feOffset dy="16"/>
+              <feGaussianBlur stdDeviation="16"/>
+              <feComposite in2="hardAlpha" operator="out"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0.309804 0 0 0 0 0.27451 0 0 0 0 0.898039 0 0 0 0.2 0"/>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_11_58"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_11_58" result="shape"/>
+            </filter>
+            <clipPath id="clip0_11_58">
+              <rect width="24" height="24" fill="white" transform="translate(384 95.5049)"/>
+            </clipPath>
+          </defs>
+        </svg>
         <span class="wink-icon wink-icon--card" data-rive-wink-wrap aria-hidden="true">
           <canvas data-rive-wink width="200" height="200"></canvas>
         </span>
       </div>
-      <p class="wallet-note">Issued as a virtual card — add it to Apple Wallet or Google Wallet in seconds.</p>
+      <p class="card-caption">Issued as a virtual card — add it to Apple Wallet or Google Wallet in seconds.</p>
     </div>
   </div>
 </section>
 
-<!-- PROBLEM -->
+<!-- ================= PROBLEM ================= -->
 <section id="problem">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">The Problem</span>
+      <span class="eyebrow eyebrow--rose">The Problem</span>
       <h2>The "Perk Gap" is killing employee experience</h2>
       <p>Benefit cards were built for a fixed-budget world. Real life is never exact — and that gap is expensive for everyone.</p>
     </div>
-    <div class="grid-3">
+    <div class="grid grid-3">
       <div class="card">
-        <div class="icon-badge">😳</div>
+        <div class="icon-badge icon-badge--rose"><svg><use href="#i-alert"/></svg></div>
         <h3>The Awkward Decline</h3>
         <p>Benefit cards decline when the bill is as little as $0.01 over budget — causing friction at the register and embarrassing employees in front of colleagues.</p>
       </div>
       <div class="card">
-        <div class="icon-badge">🧾</div>
+        <div class="icon-badge icon-badge--indigo"><svg><use href="#i-receipt"/></svg></div>
         <h3>Receipt Hell</h3>
         <p>Employees waste 2+ hours a month tracking small meal receipts. Finance wastes 10+ hours auditing them. A tax on everyone's time.</p>
       </div>
       <div class="card">
-        <div class="icon-badge">🍱</div>
+        <div class="icon-badge icon-badge--yellow"><svg><use href="#i-cup"/></svg></div>
         <h3>The Ghost Canteen</h3>
         <p>Companies pay for expensive catering that 40% of staff don't even want. Budget spent, morale missed, talent lost.</p>
       </div>
     </div>
-    <div class="badge-strip">
-      <span>2 hrs / employee / month lost to receipts</span>
-      <span>·</span>
-      <span>10 hrs / month finance overhead</span>
-      <span>·</span>
-      <span>40% canteen spend wasted</span>
+    <div class="stat-strip">
+      <span><b>2 hrs</b> / employee / month lost to receipts</span>
+      <span><b>10 hrs</b> / month finance overhead</span>
+      <span><b>40%</b> canteen spend wasted</span>
     </div>
   </div>
 </section>
 
-<!-- SOLUTION -->
-<section id="solution" class="bg-dim">
+<!-- ================= SOLUTION ================= -->
+<section id="solution" class="section-alt">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">The Solution</span>
+      <span class="eyebrow eyebrow--indigo">The Solution</span>
       <h2>JoeDoe: the invisible benefit engine</h2>
       <p>One tap. One clean approval. No friction at the register — ever.</p>
     </div>
-    <div class="grid-2" style="margin-bottom:24px;">
+    <div class="grid grid-4">
       <div class="card">
-        <div class="icon-badge">🔒</div>
+        <div class="icon-badge icon-badge--indigo"><svg><use href="#i-lock"/></svg></div>
         <h3>Ring-Fenced Control</h3>
         <p>Companies allocate funds to specific spend categories (e.g. Daily Lunch) with hard caps. Zero budget overrun, guaranteed.</p>
       </div>
       <div class="card">
-        <div class="icon-badge">⚡</div>
+        <div class="icon-badge icon-badge--rose"><svg><use href="#i-zap"/></svg></div>
         <h3>Never-Decline Engine</h3>
-        <p>Your daily stipend caps what your company pays — never what you can spend. If a purchase runs over, it still goes through in full: one tap, one clean approval, no awkward pause at checkout.</p>
+        <p>Your daily stipend caps what your company pays — never what you can spend. If a purchase runs over, it still goes through in full: one tap, one clean approval.</p>
       </div>
       <div class="card">
-        <div class="icon-badge">🏪</div>
+        <div class="icon-badge icon-badge--yellow"><svg><use href="#i-card"/></svg></div>
         <h3>Zero Merchant Friction</h3>
-        <p>Merchants receive a standard Visa/Mastercard authorization. No contract with us, no new hardware, no awareness of JoeDoe at all. Their till just rings more often.</p>
+        <p>Merchants receive a standard Visa/Mastercard authorization. No contract with us, no new hardware, no awareness of JoeDoe at all.</p>
       </div>
       <div class="card">
-        <div class="icon-badge">📊</div>
+        <div class="icon-badge icon-badge--teal"><svg><use href="#i-chart"/></svg></div>
         <h3>Zero-Receipt Audit</h3>
         <p>Every tap is a digital log — merchant, category, amount, timestamp. Finance gets an automated record. No manual claims, ever.</p>
       </div>
     </div>
-
-    <h3 style="text-align:center; margin-top:56px;">From tap to approval, in real time</h3>
-    <p style="text-align:center; max-width:60ch; margin:0 auto 36px;">No waiting, no second card, no awkward pause at the register.</p>
-    <div class="steps">
-      <div class="step"><div class="num">1</div><h4>Employee Taps</h4><p>NFC / Apple Pay / Google Pay at any terminal.</p></div>
-      <div class="step"><div class="num">2</div><h4>JoeDoe Decides</h4><p>Resolved instantly, no matter the amount.</p></div>
-      <div class="step"><div class="num">3</div><h4>One Clean Approval</h4><p>The merchant sees a single standard approval for the full amount.</p></div>
-    </div>
-    <p style="text-align:center; margin-top:32px; font-size:14px; color:var(--muted);">
-      Agentic Finance: JoeDoe is not a card wrapper — it's an intelligent decision engine built to never say no.
-    </p>
   </div>
 </section>
 
-<!-- WHY JOEDOE WINS -->
+<!-- ================= HOW IT WORKS ================= -->
 <section>
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Why JoeDoe Wins</span>
+      <h2>From tap to approval, in real time</h2>
+      <p>No waiting, no second card, no awkward pause at the register.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-line"></div>
+        <div class="step-num">1</div>
+        <h4>Employee Taps</h4>
+        <p>NFC / Apple Pay / Google Pay at any terminal.</p>
+      </div>
+      <div class="step">
+        <div class="step-line"></div>
+        <div class="step-num">2</div>
+        <h4>JoeDoe Decides</h4>
+        <p>Resolved instantly, no matter the amount.</p>
+      </div>
+      <div class="step">
+        <div class="step-line"></div>
+        <div class="step-num">3</div>
+        <h4>One Clean Approval</h4>
+        <p>The merchant sees a single standard approval for the full amount.</p>
+      </div>
+    </div>
+    <p class="steps-note">Agentic Finance: JoeDoe is not a card wrapper — it's an intelligent decision engine built to never say no.</p>
+  </div>
+</section>
+
+<!-- ================= COMPARISON ================= -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow eyebrow--indigo">Why JoeDoe Wins</span>
       <h2>Built different from legacy vouchers and benefit cards</h2>
     </div>
-    <div class="table-scroll">
-      <table class="compare">
+    <div class="compare">
+      <table>
         <thead>
-          <tr><th></th><th>Legacy Vouchers</th><th>Standard Benefit Cards</th><th>JoeDoe</th></tr>
+          <tr>
+            <th>Features</th>
+            <th>Legacy Vouchers</th>
+            <th>Standard Benefit Cards</th>
+            <th class="col-jd">JoeDoe</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td>Acceptance</td><td>Closed network</td><td>Anywhere (Visa/MC)</td><td class="win">Anywhere (Visa/MC)</td></tr>
-          <tr><td>Overspend</td><td>Not possible</td><td>Transaction declines</td><td class="win">Never declines</td></tr>
-          <tr><td>Admin effort</td><td>High</td><td>Medium</td><td class="win">Zero (automated)</td></tr>
-          <tr><td>User trust</td><td>Low</td><td>Medium</td><td class="win">High (privacy shield)</td></tr>
+          <tr>
+            <td class="feature">Acceptability</td>
+            <td class="legacy">Online/App only</td>
+            <td class="standard">Anywhere (Visa/MC)</td>
+            <td class="jd"><svg><use href="#i-check"/></svg> Anywhere (Visa/MC)</td>
+          </tr>
+          <tr>
+            <td class="feature">Transaction</td>
+            <td class="legacy">Inconvenient</td>
+            <td class="standard">Frequent declines</td>
+            <td class="jd"><svg><use href="#i-check"/></svg> Never declines</td>
+          </tr>
+          <tr>
+            <td class="feature">Administration</td>
+            <td class="legacy">High</td>
+            <td class="standard">Medium</td>
+            <td class="jd"><svg><use href="#i-check"/></svg> Zero (automated)</td>
+          </tr>
+          <tr>
+            <td class="feature">User privacy</td>
+            <td class="legacy">Low</td>
+            <td class="standard">Medium</td>
+            <td class="jd"><svg><use href="#i-check"/></svg> High (privacy protected)</td>
+          </tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
 
-<!-- SECURITY -->
-<section id="security" class="bg-navy">
+<!-- ================= SECURITY ================= -->
+<section id="security" class="section-dark">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow" style="background:rgba(255,238,102,.15); border-color:rgba(255,238,102,.3); color:var(--yellow);">Security &amp; Privacy</span>
-      <h2>Bank-grade rails. Zero-knowledge by design.</h2>
+      <span class="eyebrow eyebrow--onDark">Security &amp; Privacy</span>
+      <h2 style="color:#fff;">Bank-grade rails. Zero-knowledge by design.</h2>
       <p>Employers never see personal spend. Employees never see employer policy internals. Both get certainty.</p>
     </div>
-    <div class="grid-3">
-      <div class="card dark">
-        <div class="icon-badge">🔐</div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="icon-badge icon-badge--onDark"><svg><use href="#i-shield"/></svg></div>
         <h3>PCI-DSS Compliant</h3>
         <p>Personal card data is vaulted and tokenized. JoeDoe never stores raw card numbers.</p>
       </div>
-      <div class="card dark">
-        <div class="icon-badge">🛡️</div>
+      <div class="card">
+        <div class="icon-badge icon-badge--onDark"><svg><use href="#i-lock"/></svg></div>
         <h3>AES-256 + TLS 1.2+</h3>
         <p>Encryption at rest and in transit across every connection, every time.</p>
       </div>
-      <div class="card dark">
-        <div class="icon-badge">🙈</div>
+      <div class="card">
+        <div class="icon-badge icon-badge--onDark"><svg><use href="#i-eyeoff"/></svg></div>
         <h3>Privacy Shield</h3>
         <p>Logical data separation and masked reporting — admins see policy, never personal spend detail.</p>
       </div>
@@ -202,83 +306,80 @@
   </div>
 </section>
 
-<!-- PRICING -->
+<!-- ================= PRICING ================= -->
 <section id="pricing">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Pricing</span>
+      <span class="eyebrow eyebrow--indigo">Pricing</span>
       <h2>High-margin SaaS, simple to budget</h2>
       <p>Per active user, per month. No implementation fees, no merchant fees.</p>
     </div>
-    <div class="grid-2" style="max-width:760px; margin:0 auto;">
-      <div class="pricing-card">
-        <h3>Core</h3>
-        <div class="price">$5<span> / user / mo</span></div>
-        <ul>
-          <li>Virtual card for Apple Pay &amp; Google Pay</li>
-          <li>Never-Decline Engine</li>
-          <li>Category-based spend controls</li>
-          <li>Basic reporting</li>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-head"><h3>Core</h3></div>
+        <div class="price-amount"><span class="num">$5</span><span class="per">/ user / mo</span></div>
+        <ul class="price-features">
+          <li><svg><use href="#i-check"/></svg> Virtual card for Apple Pay &amp; Google Pay</li>
+          <li><svg><use href="#i-check"/></svg> Never-Decline Engine</li>
+          <li><svg><use href="#i-check"/></svg> Category-based spend controls</li>
+          <li><svg><use href="#i-check"/></svg> Basic reporting</li>
         </ul>
-        <a class="btn btn-ghost" href="#waitlist" style="width:100%;">Talk to sales</a>
+        <a href="#waitlist" class="btn btn-ghost">Talk to sales</a>
       </div>
-      <div class="pricing-card featured">
-        <h3>Premium</h3>
-        <div class="price">$12<span> / user / mo</span></div>
-        <ul>
-          <li>Everything in Core</li>
-          <li>HRIS integrations</li>
-          <li>Advanced analytics</li>
-          <li>Priority support</li>
+      <div class="price-card featured">
+        <div class="price-head"><h3>Premium</h3><span class="badge-popular">Most Popular</span></div>
+        <div class="price-amount"><span class="num">$12</span><span class="per">/ user / mo</span></div>
+        <ul class="price-features">
+          <li><svg><use href="#i-check"/></svg> Everything in Core</li>
+          <li><svg><use href="#i-check"/></svg> HRIS integrations</li>
+          <li><svg><use href="#i-check"/></svg> Advanced analytics</li>
+          <li><svg><use href="#i-check"/></svg> Priority support</li>
         </ul>
-        <a class="btn btn-dark" href="#waitlist" style="width:100%;">Talk to sales</a>
+        <a href="#waitlist" class="btn btn-primary">Talk to sales</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section id="waitlist">
-  <div class="wrap">
-    <div class="cta-band">
-      <h2>Ready to close the Perk Gap?</h2>
-      <p>Join the closed beta cohort or request a walkthrough for your team.</p>
-      <div style="margin-top:24px;">
-        <a class="btn btn-dark" href="mailto:hello@joedoe.co">Request a Demo</a>
-      </div>
-    </div>
+<!-- ================= CTA BANNER ================= -->
+<div class="wrap cta-wrap" id="waitlist">
+  <div class="cta-banner">
+    <h2>Ready to close the Perk Gap?</h2>
+    <p>Join the closed beta cohort or request a walkthrough for your team.</p>
+    <a href="mailto:hello@joedoe.co" class="btn btn-white">Request a Demo</a>
   </div>
-</section>
+</div>
 
-<footer class="site">
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
   <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <span class="logo">
-          <svg viewBox="0 0 388 72" xmlns="http://www.w3.org/2000/svg" style="height:24px"><path d="M54 0V45C54 59.9117 41.9117 72 27 72C12.0883 72 0 59.9117 0 45V40H16V45C16 51.0751 20.9249 56 27 56C33.0751 56 38 51.0751 38 45V16H16V0H54ZM98 0C117.882 0 134 16.1177 134 36C134 55.8823 117.882 72 98 72C78.1178 72 62 55.8823 62 36C62 16.1177 78.1178 0 98 0ZM190 16H158V28H182V44H158V56H190V72H142V0H190V16ZM220 0C237.673 0 252 14.3269 252 32V40C252 57.6731 237.673 72 220 72H198V0H220ZM296 0C315.882 0 332 16.1177 332 36C332 55.8823 315.882 72 296 72C276.118 72 260 55.8823 260 36C260 16.1177 276.118 0 296 0ZM388 16H356V28H380V44H356V56H388V72H340V0H388V16ZM98 16C86.9543 16 78 24.9543 78 36C78 47.0457 86.9543 56 98 56C109.046 56 118 47.0457 118 36C118 24.9543 109.046 16 98 16ZM214 56H220C228.837 56 236 48.8366 236 40V32C236 23.1634 228.837 16 220 16H214V56ZM296 16C284.954 16 276 24.9543 276 36C276 47.0457 284.954 56 296 56C307.046 56 316 47.0457 316 36C316 24.9543 307.046 16 296 16Z" fill="#fff"/></svg>
-        </span>
-        <p style="max-width:32ch; margin-top:16px;">The never-decline corporate stipend platform.</p>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <svg class="logo-mark" viewBox="0 0 151 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M21 0V17.5C21 23.299 16.299 28 10.5 28C4.70101 28 0 23.299 0 17.5V15.5557H6.22266V17.5C6.22266 19.8626 8.13745 21.7773 10.5 21.7773C12.8626 21.7773 14.7773 19.8626 14.7773 17.5V6.22266H6.22266V0H21ZM38.1113 0C45.8432 0.000117382 52.1113 6.26809 52.1113 14C52.1113 21.7319 45.8432 27.9999 38.1113 28C30.3793 28 24.1113 21.732 24.1113 14C24.1113 6.26801 30.3793 0 38.1113 0ZM73.8887 6.22266H61.4443V10.8887H70.7773V17.1113H61.4443V21.7773H73.8887V28H55.2227V0H73.8887V6.22266ZM85.5557 0C92.4285 5.85622e-05 97.9999 5.57155 98 12.4443V15.5557C97.9999 22.4285 92.4285 27.9999 85.5557 28H77V0H85.5557ZM115.111 0C122.843 0.000119444 129.111 6.26809 129.111 14C129.111 21.7319 122.843 27.9999 115.111 28C107.379 28 101.111 21.732 101.111 14C101.111 6.26801 107.379 0 115.111 0ZM150.889 6.22266H138.444V10.8887H147.777V17.1113H138.444V21.7773H150.889V28H132.223V0H150.889V6.22266ZM38.1113 6.22266C33.8158 6.22266 30.333 9.70445 30.333 14C30.333 18.2955 33.8158 21.7773 38.1113 21.7773C42.4068 21.7772 45.8887 18.2955 45.8887 14C45.8887 9.70452 42.4068 6.22277 38.1113 6.22266ZM83.2227 21.7773H85.5557C88.992 21.7773 91.7773 18.992 91.7773 15.5557V12.4443C91.7773 9.00798 88.992 6.22271 85.5557 6.22266H83.2227V21.7773ZM115.111 6.22266C110.816 6.22266 107.333 9.70445 107.333 14C107.333 18.2955 110.816 21.7773 115.111 21.7773C119.407 21.7772 122.889 18.2955 122.889 14C122.889 9.70453 119.407 6.22278 115.111 6.22266Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <p>The never-decline corporate stipend platform.</p>
       </div>
-      <div class="foot-cols">
-        <div class="foot-col">
-          <h5>Product</h5>
-          <a href="#solution">How It Works</a>
-          <a href="#security">Security</a>
-          <a href="#pricing">Pricing</a>
-        </div>
-        <div class="foot-col">
-          <h5>Company</h5>
-          <a href="partners/">Partners &amp; Investors</a>
-          <a href="mailto:hello@joedoe.co">Contact</a>
-        </div>
-        <div class="foot-col">
-          <h5>Legal</h5>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <a href="#solution">How It Works</a>
+        <a href="#security">Security</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="/partners/">Partners &amp; Investors</a>
+        <a href="mailto:hello@joedoe.co">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
       </div>
     </div>
-    <div class="fine">
+    <div class="footer-bottom">
       <span>© 2026 JoeDoe. Patent pending.</span>
       <span>joedoe.co</span>
     </div>
@@ -287,6 +388,6 @@
 
 <script src="https://unpkg.com/@rive-app/canvas@2.38.5/rive.js" defer></script>
 <script src="wink-icon.js" defer></script>
-<script src="nav-scroll.js" defer></script>
+<script src="scroll-spy.js" defer></script>
 </body>
 </html>

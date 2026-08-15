@@ -1,177 +1,211 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JoeDoe — Partners &amp; Investors</title>
-<meta name="description" content="JoeDoe is building the never-decline corporate stipend platform. Explore partnership tracks for BaaS/infrastructure providers, HRIS integrators, and strategic investors.">
+<meta name="description" content="JoeDoe is a pre-revenue fintech platform in closed beta, currently in conversation with infrastructure partners, HRIS integrators, and strategic investors.">
 <link rel="icon" href="../assets/joedoe-icon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="shortcut icon" href="../favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#000066">
+<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#4f46e5">
 <link rel="manifest" href="../site.webmanifest">
-<meta name="theme-color" content="#000066">
+<meta name="theme-color" content="#4f46e5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
-<header class="site on-dark">
-  <div class="nav">
-    <a href="/" class="logo">
-      <svg viewBox="0 0 388 72" xmlns="http://www.w3.org/2000/svg" style="height:26px"><path d="M54 0V45C54 59.9117 41.9117 72 27 72C12.0883 72 0 59.9117 0 45V40H16V45C16 51.0751 20.9249 56 27 56C33.0751 56 38 51.0751 38 45V16H16V0H54ZM98 0C117.882 0 134 16.1177 134 36C134 55.8823 117.882 72 98 72C78.1178 72 62 55.8823 62 36C62 16.1177 78.1178 0 98 0ZM190 16H158V28H182V44H158V56H190V72H142V0H190V16ZM220 0C237.673 0 252 14.3269 252 32V40C252 57.6731 237.673 72 220 72H198V0H220ZM296 0C315.882 0 332 16.1177 332 36C332 55.8823 315.882 72 296 72C276.118 72 260 55.8823 260 36C260 16.1177 276.118 0 296 0ZM388 16H356V28H380V44H356V56H388V72H340V0H388V16ZM98 16C86.9543 16 78 24.9543 78 36C78 47.0457 86.9543 56 98 56C109.046 56 118 47.0457 118 36C118 24.9543 109.046 16 98 16ZM214 56H220C228.837 56 236 48.8366 236 40V32C236 23.1634 228.837 16 220 16H214V56ZM296 16C284.954 16 276 24.9543 276 36C276 47.0457 284.954 56 296 56C307.046 56 316 47.0457 316 36C316 24.9543 307.046 16 296 16Z" fill="#000066"/></svg>
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 4 14 11 14 10 22 20 10 13 10 13 2"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><line x1="2.5" y1="9.5" x2="21.5" y2="9.5"/><line x1="6" y1="14.5" x2="11" y2="14.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M3 6.5 12 13l9-6.5"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9.5 10.5 14 15 21 7"/><polyline points="15 7 21 7 21 13"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="logo" aria-label="JoeDoe home">
+      <svg class="logo-mark" viewBox="0 0 151 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M21 0V17.5C21 23.299 16.299 28 10.5 28C4.70101 28 0 23.299 0 17.5V15.5557H6.22266V17.5C6.22266 19.8626 8.13745 21.7773 10.5 21.7773C12.8626 21.7773 14.7773 19.8626 14.7773 17.5V6.22266H6.22266V0H21ZM38.1113 0C45.8432 0.000117382 52.1113 6.26809 52.1113 14C52.1113 21.7319 45.8432 27.9999 38.1113 28C30.3793 28 24.1113 21.732 24.1113 14C24.1113 6.26801 30.3793 0 38.1113 0ZM73.8887 6.22266H61.4443V10.8887H70.7773V17.1113H61.4443V21.7773H73.8887V28H55.2227V0H73.8887V6.22266ZM85.5557 0C92.4285 5.85622e-05 97.9999 5.57155 98 12.4443V15.5557C97.9999 22.4285 92.4285 27.9999 85.5557 28H77V0H85.5557ZM115.111 0C122.843 0.000119444 129.111 6.26809 129.111 14C129.111 21.7319 122.843 27.9999 115.111 28C107.379 28 101.111 21.732 101.111 14C101.111 6.26801 107.379 0 115.111 0ZM150.889 6.22266H138.444V10.8887H147.777V17.1113H138.444V21.7773H150.889V28H132.223V0H150.889V6.22266ZM38.1113 6.22266C33.8158 6.22266 30.333 9.70445 30.333 14C30.333 18.2955 33.8158 21.7773 38.1113 21.7773C42.4068 21.7772 45.8887 18.2955 45.8887 14C45.8887 9.70452 42.4068 6.22277 38.1113 6.22266ZM83.2227 21.7773H85.5557C88.992 21.7773 91.7773 18.992 91.7773 15.5557V12.4443C91.7773 9.00798 88.992 6.22271 85.5557 6.22266H83.2227V21.7773ZM115.111 6.22266C110.816 6.22266 107.333 9.70445 107.333 14C107.333 18.2955 110.816 21.7773 115.111 21.7773C119.407 21.7772 122.889 18.2955 122.889 14C122.889 9.70453 119.407 6.22278 115.111 6.22266Z" fill="currentColor"/>
+      </svg>
     </a>
-    <nav class="nav-links">
-      <a class="navlink" href="/">Product</a>
-      <a class="navlink" href="#tracks">Partnership Tracks</a>
-      <a class="navlink" href="#market">Market</a>
-      <a class="navlink" href="#roadmap">Roadmap</a>
-    </nav>
-    <div class="nav-cta">
-      <a class="btn btn-dark" href="#connect">Start a conversation</a>
+    <div class="nav-panel" id="navPanel">
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#problem">The Problem</a>
+        <a href="/#solution">How It Works</a>
+        <a href="/#security">Security</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/partners/" aria-current="page">Partners &amp; Investors</a>
+      </nav>
+      <div class="nav-right">
+        <a href="/#waitlist" class="nav-login">Log in</a>
+        <a href="#connect" class="btn btn-primary">Start a conversation</a>
+      </div>
     </div>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navPanel">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
   </div>
 </header>
+<script>
+  (function () {
+    var btn = document.getElementById('navToggle');
+    var panel = document.getElementById('navPanel');
+    if (!btn || !panel) return;
+    btn.addEventListener('click', function () {
+      var open = panel.classList.toggle('mobile-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    panel.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') { panel.classList.remove('mobile-open'); btn.setAttribute('aria-expanded', 'false'); }
+    });
+  })();
+</script>
 
-<!-- HERO -->
-<section class="hero" style="padding:80px 0 64px;">
-  <div class="wrap hero-grid">
+<!-- ================= HERO ================= -->
+<section class="hero" style="padding-top:64px;">
+  <div class="wrap">
     <div>
-      <span class="eyebrow">Partners &amp; Investors</span>
-      <h1 style="max-width:18ch;">Building the rails for <span class="hl">never-decline</span> corporate spend.</h1>
-      <p class="lead">JoeDoe is a pre-revenue fintech platform in closed beta, currently in conversation with infrastructure partners, HRIS integrators, and strategic investors. This page is informational — a starting point for a conversation, not a term sheet.</p>
-    </div>
-    <div class="hero-visual">
-      <div class="vcard">
-        <svg class="vcard-logo" viewBox="0 0 374 160" xmlns="http://www.w3.org/2000/svg"><path d="M206 88C223.673 88 238 102.327 238 120V128C238 145.673 223.673 160 206 160H184V88H206ZM282 88C301.882 88 318 104.118 318 124C318 143.882 301.882 160 282 160C262.118 160 246 143.882 246 124C246 104.118 262.118 88 282 88ZM374 104H342V116H366V132H342V144H374V160H326V88H374V104ZM200 144H206C214.837 144 222 136.837 222 128V120C222 111.163 214.837 104 206 104H200V144ZM282 104C270.954 104 262 112.954 262 124C262 135.046 270.954 144 282 144C293.046 144 302 135.046 302 124C302 112.954 293.046 104 282 104ZM238 0V45C238 59.9117 225.912 72 211 72C196.088 72 184 59.9117 184 45V40H200V45C200 51.0751 204.925 56 211 56C217.075 56 222 51.0751 222 45V16H200V0H238ZM282 0C301.882 0 318 16.1177 318 36C318 55.8823 301.882 72 282 72C262.118 72 246 55.8823 246 36C246 16.1177 262.118 0 282 0ZM374 16H342V28H366V44H342V56H374V72H326V0H374V16ZM282 16C270.954 16 262 24.9543 262 36C262 47.0457 270.954 56 282 56C293.046 56 302 47.0457 302 36C302 24.9543 293.046 16 282 16Z" fill="#000066"/><path d="M80 0C124.183 0 160 35.8172 160 80C160 124.183 124.183 160 80 160C35.8172 160 0 124.183 0 80C2.06165e-06 35.8172 35.8172 2.0619e-06 80 0ZM80 17.7773C45.6356 17.7773 17.7773 45.6356 17.7773 80C17.7773 114.364 45.6356 142.223 80 142.223C114.364 142.223 142.223 114.364 142.223 80C142.223 45.6356 114.364 17.7773 80 17.7773ZM124.498 100.248C122.082 105.558 118.725 110.413 114.569 114.569C108.501 120.638 100.943 125.002 92.6533 127.223L90.3525 118.637C97.1346 116.819 103.319 113.25 108.284 108.285C111.889 104.68 114.759 100.431 116.756 95.7783L124.498 100.248ZM71.1113 60L60 71.1104L71.1113 82.2227L64.4443 88.8887L53.333 77.7773L42.2227 88.8887L35.5557 82.2227L46.666 71.1104L35.5557 60L42.2227 53.333L53.333 64.4434L64.4443 53.333L71.1113 60ZM127 76H85V66H127V76Z" fill="#000066"/><path d="M126.967 94C121.401 112.701 104.975 126.723 85 128.747V118.682C99.4089 116.838 111.357 107.131 116.409 94H126.967Z" fill="#000066"/></svg>
-        <div class="vcard-pan">•••• 5042</div>
-        <span class="wink-icon wink-icon--card" data-rive-wink-wrap aria-hidden="true">
-          <canvas data-rive-wink width="200" height="200"></canvas>
-        </span>
+      <span class="eyebrow eyebrow--rose" style="margin-bottom:16px;">Partners &amp; Investors</span>
+      <h1 style="font-size:48px;">Building the <span class="accent">rails</span> for never-decline corporate spend.</h1>
+      <p class="lede">JoeDoe is a pre-revenue fintech platform in closed beta, currently in conversation with infrastructure partners, HRIS integrators, and strategic investors. This page is informational — a starting point for a conversation, not a term sheet.</p>
+      <div class="hero-ctas">
+        <a href="#connect" class="btn btn-primary">Start a conversation</a>
       </div>
-      <p class="wallet-note">Issued as a virtual card — add it to Apple Wallet or Google Wallet in seconds.</p>
+    </div>
+    <div class="card-scene">
+      <span class="wink-icon wink-icon--partners" data-rive-wink-wrap aria-hidden="true">
+        <canvas data-rive-wink width="400" height="400"></canvas>
+      </span>
     </div>
   </div>
 </section>
 
-<!-- TRACKS -->
+<!-- ================= THREE TRACKS ================= -->
 <section id="tracks">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Three Conversation Tracks</span>
+      <span class="eyebrow eyebrow--indigo">Three Conversation Tracks</span>
       <h2>Where JoeDoe fits in your roadmap</h2>
     </div>
-    <div class="grid-3">
-      <div class="track">
-        <span class="tag">Infrastructure</span>
+    <div class="grid grid-3">
+      <div class="card track-card">
+        <span class="track-tag track-tag--yellow">Infrastructure</span>
         <h3>BaaS &amp; Card Rails</h3>
         <p>JoeDoe sits on top of Banking-as-a-Service rails and PCI-compliant card vaulting to power real-time transaction decisioning. We're exploring deeper integration and volume commitments with issuing and rails partners as we scale beyond closed beta.</p>
-        <div class="pill-row">
-          <span class="pill">Issuing &amp; card networks</span>
-          <span class="pill">Real-time decisioning</span>
-          <span class="pill">Open banking rails (ACH/SEPA/Bacs)</span>
-        </div>
+        <ul>
+          <li>Issuing &amp; card networks</li>
+          <li>Real-time decisioning</li>
+          <li>Open banking rails (ACH/SEPA/Bacs)</li>
+        </ul>
       </div>
-      <div class="track">
-        <span class="tag">Integration</span>
+      <div class="card track-card">
+        <span class="track-tag track-tag--indigo">Integration</span>
         <h3>HRIS &amp; Payroll Platforms</h3>
         <p>Employer onboarding is fastest when stipend policy and employee rosters sync directly from existing HR systems. We're scoping one-click onboarding integrations with HRIS platforms to shorten employer time-to-value.</p>
-        <div class="pill-row">
-          <span class="pill">Roster &amp; policy sync</span>
-          <span class="pill">One-click employer onboarding</span>
-          <span class="pill">SSO / provisioning</span>
-        </div>
+        <ul>
+          <li>Roster &amp; policy sync</li>
+          <li>One-click employer onboarding</li>
+          <li>SSO / provisioning</li>
+        </ul>
       </div>
-      <div class="track">
-        <span class="tag">Capital</span>
+      <div class="card track-card">
+        <span class="track-tag track-tag--rose">Capital</span>
         <h3>Strategic Investors &amp; Angels</h3>
         <p>JoeDoe is bootstrapping through Foundation and Closed Beta to preserve equity and negotiating leverage. A small strategic angel round is one option under consideration if external capital accelerates the roadmap — this is a scouting conversation, not a hard ask.</p>
-        <div class="pill-row">
-          <span class="pill">Patent-pending IP</span>
-          <span class="pill">Pre-revenue, closed beta</span>
-          <span class="pill">Fintech / HR-tech thesis</span>
-        </div>
+        <ul>
+          <li>Patent-pending IP</li>
+          <li>Pre-revenue, closed beta</li>
+          <li>Fintech / HR-tech thesis</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT MAKES IT DEFENSIBLE -->
-<section class="bg-dim">
-  <div class="wrap grid-2" style="align-items:center;">
-    <div>
-      <span class="eyebrow">Why It's Defensible</span>
+<!-- ================= DEFENSIBILITY ================= -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head left" style="margin-bottom:40px;">
+      <span class="eyebrow eyebrow--indigo">Why It's Defensible</span>
       <h2>Merchant-agnostic by design</h2>
-      <p>Merchants receive a standard Visa/Mastercard authorization — no onboarding, no contracts, no new hardware. Any business that already accepts card payments is already reachable by JoeDoe. That zero-friction merchant model is a structural moat, not a feature.</p>
-      <p>Our core transaction engine — the technology behind the never-decline guarantee — is covered by trade secret protection and a provisional patent application. We keep the underlying mechanics confidential ahead of launch; full technical detail is available under NDA for qualified partners and investors.</p>
     </div>
-    <div class="card">
-      <h3>Agentic Finance, not a card wrapper</h3>
-      <p>JoeDoe evaluates every transaction and resolves it instantly — no manual review, no declines. The near-term roadmap builds an intelligence layer on top of that proprietary transaction dataset:</p>
-      <p style="margin-bottom:6px;">→ Dynamic policy optimization</p>
-      <p style="margin-bottom:6px;">→ Anomaly &amp; abuse detection</p>
-      <p style="margin-bottom:6px;">→ Predictive float management</p>
-      <p style="margin-bottom:0;">→ Smarter spend-category enrichment</p>
+    <div class="defend-grid">
+      <div class="defend-copy">
+        <h3>Standard rails meet a proprietary decision layer</h3>
+        <p>Merchants receive a standard Visa/Mastercard authorization — no onboarding, no contracts, no new hardware. Any business that already accepts card payments is already reachable by JoeDoe. That zero-friction merchant model is a structural moat, not a feature.</p>
+        <p>Our core transaction engine — the technology behind the never-decline guarantee — is covered by trade secret protection and a provisional patent application. We keep the underlying mechanics confidential ahead of launch; full technical detail is available under NDA for qualified partners and investors.</p>
+      </div>
+      <div class="defend-card">
+        <div class="icon-badge icon-badge--indigo"><svg><use href="#i-zap"/></svg></div>
+        <h4>Agentic Finance, not a card wrapper</h4>
+        <p style="color:var(--slate-600); font-size:14.5px; margin-bottom:14px;">JoeDoe evaluates every transaction and resolves it instantly — no manual review, no declines. The near-term roadmap builds an intelligence layer on top of that proprietary transaction dataset:</p>
+        <ul class="defend-list">
+          <li><svg><use href="#i-arrow"/></svg> Dynamic policy optimization</li>
+          <li><svg><use href="#i-arrow"/></svg> Anomaly &amp; abuse detection</li>
+          <li><svg><use href="#i-arrow"/></svg> Predictive float management</li>
+          <li><svg><use href="#i-arrow"/></svg> Smarter spend-category enrichment</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- MARKET -->
+<!-- ================= MARKET OPPORTUNITY ================= -->
 <section id="market">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Market Opportunity</span>
+      <span class="eyebrow eyebrow--teal">Market Opportunity</span>
       <h2>A US-first, $6B and growing opportunity</h2>
       <p>North America holds ~45% of the $7.7B global expense management software market (Straits Research, 2024), plus the corporate meal benefit platform layer growing 12% YoY through 2029.</p>
     </div>
-    <div class="metric-row">
-      <div class="metric">
-        <div class="label">TAM</div>
-        <div class="value">~$6B</div>
-        <p>US stipend &amp; expense management software market.</p>
+    <div class="stat-cards">
+      <div class="stat-card stat-card--indigo">
+        <span class="tag">TAM</span>
+        <div class="amount">~$6B</div>
+        <p class="desc">US stipend &amp; expense management software market.</p>
       </div>
-      <div class="metric">
-        <div class="label">SAM</div>
-        <div class="value">~$1.1B</div>
-        <p>607K US companies with 20–499 employees carry active benefit spend (SBA, 2025); ~52K in tech/creative services, ~80 staff avg at $5 ARPU/mo.</p>
+      <div class="stat-card stat-card--teal">
+        <span class="tag">SAM</span>
+        <div class="amount">~$1.1B</div>
+        <p class="desc">607K US companies with 20–499 employees carry active benefit spend (SBA, 2025); ~52K in tech/creative services, ~80 staff avg at $5 ARPU/mo.</p>
       </div>
-      <div class="metric">
-        <div class="label">SOM</div>
-        <div class="value">$100M</div>
-        <p>Target transaction volume by Year 3 (~$5M net revenue) — ~22K active daily users across 275+ employer clients, ~1% SAM capture.</p>
+      <div class="stat-card stat-card--yellow">
+        <span class="tag">SOM</span>
+        <div class="amount">$100M</div>
+        <p class="desc">Target transaction volume by Year 3 (~$5M net revenue) — ~22K active daily users across 275+ employer clients, ~1% SAM capture.</p>
       </div>
     </div>
-    <p style="text-align:center; margin-top:28px; font-size:13.5px;">Free meals are the #1 employee perk (ezCater, 2024) · Food is the top stipend category claimed (Compt Benchmark, 2024)</p>
+    <p class="stat-footnote">Free meals are the #1 employee perk (ezCater, 2024) · Food is the top stipend category claimed (Compt Benchmark, 2024)</p>
   </div>
 </section>
 
-<!-- BUSINESS MODEL -->
-<section class="bg-dim">
+<!-- ================= BUSINESS MODEL ================= -->
+<section class="section-alt">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Business Model</span>
+      <span class="eyebrow eyebrow--indigo">Business Model</span>
       <h2>High-margin SaaS + issuer economics</h2>
     </div>
-    <div class="grid-3">
+    <div class="grid grid-3">
       <div class="card">
-        <div class="icon-badge">💳</div>
+        <div class="icon-badge icon-badge--indigo"><svg><use href="#i-card"/></svg></div>
         <h3>SaaS Fee</h3>
         <p>$5–$12 per active user/month, paid by the employer. Core and Premium tiers, the latter adding HRIS integrations and advanced analytics.</p>
       </div>
       <div class="card">
-        <div class="icon-badge">🔁</div>
+        <div class="icon-badge icon-badge--rose"><svg><use href="#i-arrow"/></svg></div>
         <h3>Issuer Interchange</h3>
         <p>~1.5% gross on stipend spend, in partnership with issuing and rail partners — no incremental sales effort required.</p>
       </div>
       <div class="card">
-        <div class="icon-badge">💰</div>
+        <div class="icon-badge icon-badge--yellow"><svg><use href="#i-trend"/></svg></div>
         <h3>Float</h3>
         <p>Passive interest on pre-funded corporate wallets — a natural byproduct of the ring-fenced allocation model.</p>
       </div>
@@ -179,31 +213,39 @@
   </div>
 </section>
 
-<!-- ROADMAP -->
+<!-- ================= ROADMAP ================= -->
 <section id="roadmap">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">On the Horizon</span>
+      <span class="eyebrow eyebrow--indigo">On the Horizon</span>
       <h2>From closed beta to scale</h2>
     </div>
     <div class="roadmap">
-      <div class="stage">
-        <div class="q">Now</div>
+      <div class="rm-step is-now">
+        <div class="rm-line"></div>
+        <div class="rm-dot"></div>
+        <span class="rm-status">Now</span>
         <h4>Closed Beta</h4>
         <p>Pilot employers live on the Never-Decline Engine; provisional patent filed.</p>
       </div>
-      <div class="stage">
-        <div class="q">Next</div>
+      <div class="rm-step">
+        <div class="rm-line"></div>
+        <div class="rm-dot"></div>
+        <span class="rm-status">Next</span>
         <h4>HRIS Integrations</h4>
         <p>One-click employer onboarding via key HR platforms; JoeDoe Junior beta scoping.</p>
       </div>
-      <div class="stage">
-        <div class="q">Next</div>
+      <div class="rm-step">
+        <div class="rm-line"></div>
+        <div class="rm-dot"></div>
+        <span class="rm-status">Next</span>
         <h4>International Filing</h4>
         <p>Expanding patent coverage to key international markets.</p>
       </div>
-      <div class="stage">
-        <div class="q">Post-Seed</div>
+      <div class="rm-step">
+        <div class="rm-line"></div>
+        <div class="rm-dot"></div>
+        <span class="rm-status">Post-Seed</span>
         <h4>Intelligence Layer</h4>
         <p>Dynamic policy optimization, anomaly detection, and predictive float management on the proprietary transaction dataset.</p>
       </div>
@@ -211,48 +253,45 @@
   </div>
 </section>
 
-<!-- CONNECT -->
-<section id="connect">
-  <div class="wrap">
-    <div class="cta-band">
-      <h2>Let's talk.</h2>
-      <p>Whether you're exploring rails, integrations, or an investment thesis in agentic fintech — reach out and we'll set up time.</p>
-      <div style="margin-top:24px;">
-        <a class="btn btn-dark" href="mailto:partners@joedoe.co">partners@joedoe.co</a>
-      </div>
-    </div>
+<!-- ================= CTA BANNER ================= -->
+<div class="wrap cta-wrap" id="connect">
+  <div class="cta-banner">
+    <h2>Let's talk.</h2>
+    <p>Whether you're exploring rails, integrations, or an investment thesis in agentic fintech — reach out and we'll set up time.</p>
+    <a href="mailto:partners@joedoe.co" class="btn btn-white"><svg width="16" height="16"><use href="#i-mail"/></svg> partners@joedoe.co</a>
   </div>
-</section>
+</div>
 
-<footer class="site">
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
   <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <span class="logo">
-          <svg viewBox="0 0 388 72" xmlns="http://www.w3.org/2000/svg" style="height:24px"><path d="M54 0V45C54 59.9117 41.9117 72 27 72C12.0883 72 0 59.9117 0 45V40H16V45C16 51.0751 20.9249 56 27 56C33.0751 56 38 51.0751 38 45V16H16V0H54ZM98 0C117.882 0 134 16.1177 134 36C134 55.8823 117.882 72 98 72C78.1178 72 62 55.8823 62 36C62 16.1177 78.1178 0 98 0ZM190 16H158V28H182V44H158V56H190V72H142V0H190V16ZM220 0C237.673 0 252 14.3269 252 32V40C252 57.6731 237.673 72 220 72H198V0H220ZM296 0C315.882 0 332 16.1177 332 36C332 55.8823 315.882 72 296 72C276.118 72 260 55.8823 260 36C260 16.1177 276.118 0 296 0ZM388 16H356V28H380V44H356V56H388V72H340V0H388V16ZM98 16C86.9543 16 78 24.9543 78 36C78 47.0457 86.9543 56 98 56C109.046 56 118 47.0457 118 36C118 24.9543 109.046 16 98 16ZM214 56H220C228.837 56 236 48.8366 236 40V32C236 23.1634 228.837 16 220 16H214V56ZM296 16C284.954 16 276 24.9543 276 36C276 47.0457 284.954 56 296 56C307.046 56 316 47.0457 316 36C316 24.9543 307.046 16 296 16Z" fill="#fff"/></svg>
-        </span>
-        <p style="max-width:32ch; margin-top:16px;">The never-decline corporate stipend platform.</p>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <svg class="logo-mark" viewBox="0 0 151 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M21 0V17.5C21 23.299 16.299 28 10.5 28C4.70101 28 0 23.299 0 17.5V15.5557H6.22266V17.5C6.22266 19.8626 8.13745 21.7773 10.5 21.7773C12.8626 21.7773 14.7773 19.8626 14.7773 17.5V6.22266H6.22266V0H21ZM38.1113 0C45.8432 0.000117382 52.1113 6.26809 52.1113 14C52.1113 21.7319 45.8432 27.9999 38.1113 28C30.3793 28 24.1113 21.732 24.1113 14C24.1113 6.26801 30.3793 0 38.1113 0ZM73.8887 6.22266H61.4443V10.8887H70.7773V17.1113H61.4443V21.7773H73.8887V28H55.2227V0H73.8887V6.22266ZM85.5557 0C92.4285 5.85622e-05 97.9999 5.57155 98 12.4443V15.5557C97.9999 22.4285 92.4285 27.9999 85.5557 28H77V0H85.5557ZM115.111 0C122.843 0.000119444 129.111 6.26809 129.111 14C129.111 21.7319 122.843 27.9999 115.111 28C107.379 28 101.111 21.732 101.111 14C101.111 6.26801 107.379 0 115.111 0ZM150.889 6.22266H138.444V10.8887H147.777V17.1113H138.444V21.7773H150.889V28H132.223V0H150.889V6.22266ZM38.1113 6.22266C33.8158 6.22266 30.333 9.70445 30.333 14C30.333 18.2955 33.8158 21.7773 38.1113 21.7773C42.4068 21.7772 45.8887 18.2955 45.8887 14C45.8887 9.70452 42.4068 6.22277 38.1113 6.22266ZM83.2227 21.7773H85.5557C88.992 21.7773 91.7773 18.992 91.7773 15.5557V12.4443C91.7773 9.00798 88.992 6.22271 85.5557 6.22266H83.2227V21.7773ZM115.111 6.22266C110.816 6.22266 107.333 9.70445 107.333 14C107.333 18.2955 110.816 21.7773 115.111 21.7773C119.407 21.7772 122.889 18.2955 122.889 14C122.889 9.70453 119.407 6.22278 115.111 6.22266Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <p>The never-decline corporate stipend platform.</p>
       </div>
-      <div class="foot-cols">
-        <div class="foot-col">
-          <h5>Product</h5>
-          <a href="/#solution">How It Works</a>
-          <a href="/#security">Security</a>
-          <a href="/#pricing">Pricing</a>
-        </div>
-        <div class="foot-col">
-          <h5>Company</h5>
-          <a href="/partners/">Partners &amp; Investors</a>
-          <a href="mailto:hello@joedoe.co">Contact</a>
-        </div>
-        <div class="foot-col">
-          <h5>Legal</h5>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <a href="/#solution">How It Works</a>
+        <a href="/#security">Security</a>
+        <a href="/#pricing">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="/partners/">Partners &amp; Investors</a>
+        <a href="mailto:hello@joedoe.co">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
       </div>
     </div>
-    <div class="fine">
+    <div class="footer-bottom">
       <span>© 2026 JoeDoe. Patent pending.</span>
       <span>joedoe.co</span>
     </div>
@@ -261,6 +300,6 @@
 
 <script src="https://unpkg.com/@rive-app/canvas@2.38.5/rive.js" defer></script>
 <script src="../wink-icon.js" defer></script>
-<script src="../nav-scroll.js" defer></script>
+<script src="../scroll-spy.js" defer></script>
 </body>
 </html>
