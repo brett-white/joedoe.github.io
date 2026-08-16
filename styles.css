@@ -198,8 +198,7 @@ button:focus-visible {
 .nav-toggle { display: none; }
 
 .nav-panel { display: contents; }
-@media (max-width: 900px) {
-  .nav-links, .nav-right { display: none; }
+@media (max-width: 1040px) {
   .nav-toggle {
     display: inline-flex;
     align-items: center;
@@ -209,7 +208,10 @@ button:focus-visible {
     border: 1px solid var(--border);
     background: #fff;
   }
-  .nav-panel.mobile-open {
+  /* Always laid out (not display:none) so opacity/transform can transition;
+     pointer-events keeps it non-interactive and unreachable by tab/click
+     while closed despite remaining in the layout. */
+  .nav-panel {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -222,14 +224,25 @@ button:focus-visible {
     padding: 12px 24px 20px;
     box-shadow: 0 12px 24px rgba(15,23,42,0.08);
     z-index: 39;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity .22s ease, transform .22s ease, visibility .22s;
   }
-  .nav-panel.mobile-open .nav-links {
+  .nav-panel.mobile-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .nav-panel .nav-links {
     display: flex;
     flex-direction: column;
     gap: 2px;
   }
-  .nav-panel.mobile-open .nav-links a { padding: 10px 0; width: 100%; }
-  .nav-panel.mobile-open .nav-right {
+  .nav-panel .nav-links a { padding: 10px 0; width: 100%; }
+  .nav-panel .nav-right {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -238,8 +251,11 @@ button:focus-visible {
     padding-top: 14px;
     border-top: 1px solid var(--border);
   }
-  .nav-panel.mobile-open .nav-login { display: block; padding: 6px 0; }
-  .nav-panel.mobile-open .btn { justify-content: center; }
+  .nav-panel .nav-login { display: block; padding: 6px 0; }
+  .nav-panel .btn { justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-panel { transition: none; }
 }
 
 /* ---- Hero ---------------------------------------------------------------------- */
@@ -317,12 +333,13 @@ button:focus-visible {
   text-align: center;
   font-size: 13px;
   color: var(--slate-caption);
-  max-width: 300px;
-  margin: 18px auto 0;
+  max-width: 380px;
+  margin: 0 auto 0;
+  padding: 0 40px;
 }
 
 /* ---- Real logo (exported from Figma node 5:39 / the JoeDoe Brand library) --- */
-.logo-mark { height: 22px; width: auto; display: block; color: var(--brand-indigo); }
+.logo-mark { height: 32px; width: auto; display: block; color: var(--brand-indigo); }
 .site-footer .logo-mark { color: #818cf8; }
 
 /* ---- Wink mascot icon (assets/joedoe-wink.riv via wink-icon.js) — the .riv
@@ -378,6 +395,7 @@ section { padding: 96px 0; }
   .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
   .hero .wrap { grid-template-columns: 1fr; }
   .hero .wrap > .card-scene { order: -1; padding: 0; }
+  .hero .wrap > .card-scene .card-visual { /* margin: 0 -30px; */ scale: 1.14; }
   .hero h1 { font-size: 40px; }
 }
 
