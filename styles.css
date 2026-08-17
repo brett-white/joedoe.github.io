@@ -675,3 +675,31 @@ section { padding: 96px 0; }
   .roadmap { flex-direction: column; gap: 32px; }
   .rm-line { display: none; }
 }
+
+/* ==========================================================================
+   Legal pages (Privacy Policy, Terms of Service) — simple article layout
+   ========================================================================== */
+.legal { padding: 64px 0 96px; }
+.legal-content { max-width: 680px; margin: 0 auto; }
+.legal-content .eyebrow { margin-bottom: 16px; }
+.legal-content h1 { font-size: 40px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 10px; }
+.legal-meta { font-family: var(--font-mono); font-size: 13px; color: var(--slate-caption); margin-bottom: 28px; }
+.legal-callout {
+  background: var(--brand-indigo-tint);
+  border: 1px solid #e0e7ff;
+  border-radius: var(--radius-md);
+  padding: 18px 24px;
+  color: var(--slate-600);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+.legal-body h2 { font-size: 21px; font-weight: 700; margin: 36px 0 12px; }
+.legal-body h2:first-child { margin-top: 0; }
+.legal-body p { color: var(--slate-600); font-size: 15.5px; line-height: 1.7; }
+.legal-body p + p { margin-top: 8px; }
+.legal-body a { color: var(--brand-indigo); text-decoration: underline; text-underline-offset: 2px; }
+.legal-body a:hover { color: var(--brand-indigo-dark); }
+@media (max-width: 640px) {
+  .legal-content h1 { font-size: 30px; }
+}
