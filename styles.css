@@ -396,7 +396,6 @@ section { padding: 96px 0; }
   .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
   .hero .wrap { grid-template-columns: 1fr; }
   .hero .wrap > .card-scene { order: -1; padding: 0; }
-  .hero .wrap > .card-scene .card-visual { /* margin: 0 -30px; */ scale: 1.14; }
   .hero h1 { font-size: 40px; }
 }
 
