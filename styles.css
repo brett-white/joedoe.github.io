@@ -327,6 +327,9 @@ button:focus-visible {
    static ring/blink art, layered over the card using .wink-icon--card — the
    .riv draws its own ring, so the card SVG intentionally omits one. --- */
 .card-scene { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; }
+/* Partners page's hero card scene — split from .card-scene so the homepage-only
+   edge-to-edge mobile treatment below doesn't affect this page. */
+.card-scene-partners { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; }
 .card-visual { position: relative; width: 100%; max-width: 480px; }
 .card-visual svg { display: block; width: 100%; height: auto; }
 
@@ -395,7 +398,8 @@ section { padding: 96px 0; }
 @media (max-width: 900px) {
   .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
   .hero .wrap { grid-template-columns: 1fr; }
-  .hero .wrap > .card-scene { order: -1; padding: 0; }
+  .hero .wrap > .card-scene { order: -1; padding: 0; margin: 0 -24px; }
+  .hero .wrap > .card-scene-partners { order: -1; padding: 0; }
   .hero h1 { font-size: 40px; }
 }
 
