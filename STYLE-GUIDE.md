@@ -1,6 +1,6 @@
 # JoeDoe — Reskin Style Guide
 
-This build reskins the live joedoe.co copy with the new visual system from the Figma redesign (`JoeDoe-Website`, frames `joedoe-home-redesign` and `joedoe-partners-redesign`). All copy is pulled from the current live site, not the Figma AI draft.
+This build reskins the live joedoe.co copy with the new visual system from the Figma redesign (`JoeDoe-Website`, frames `joedoe-home-redesign` and `joedoe-partners-redesign`). Copy was originally pulled from the live site, not the Figma AI draft, and has since been revised to match the current investor deck (see "Copy: aligned with the investor deck" below).
 
 ## Files
 
@@ -21,7 +21,7 @@ The Figma file had one registered variable (`JoeDoe Yellow: #FFEE66`, unused in 
 | Yellow | `#FFD028` | The JoeDoe card itself + "Most Popular" badge only — signature color, not general decoration |
 | Teal | `#0D9488` (decorative) / `#0F766E` (text) | Data & metrics only — the comparison table's JoeDoe column, TAM/SAM/SOM stat cards |
 
-Amber (`#F59E0B`, used once for the roadmap's "Post-Seed" tag) is cut entirely. The roadmap shows status through fill (solid indigo dot = "Now," outline = future) instead of a fourth arbitrary hue — same information, one fewer color to explain.
+Amber (`#F59E0B`, used once for the roadmap's final-stage tag, now labelled "Later") is cut entirely. The roadmap shows status through fill (solid indigo dot = "Now," outline = future) instead of a fourth arbitrary hue — same information, one fewer color to explain.
 
 **2. Several combinations failed WCAG AA contrast** — verified with a computed contrast check, then confirmed with an automated `axe-core` audit (both pages: **0 violations** against WCAG 2 A/AA):
 
@@ -29,7 +29,7 @@ Amber (`#F59E0B`, used once for the roadmap's "Post-Seed" tag) is cut entirely. 
 |---|---|---|---|---|
 | Small eyebrow labels (11px) | Rose `#F43F5E` on white | 3.67:1 (fail) | `#E11D48` on white | 4.70:1 |
 | "JoeDoe" column header | Teal `#0D9488` on white | 3.74:1 (fail) | `#0F766E` on white | 5.47:1 |
-| Roadmap "Post-Seed" tag | Amber `#F59E0B` on white | 2.15:1 (fail) | Cut — see above | — |
+| Roadmap final-stage tag ("Later") | Amber `#F59E0B` on white | 2.15:1 (fail) | Cut — see above | — |
 | Footnotes/captions | `#94A3B8` on white | 2.56:1 (fail) | `#5B6B82` on white | 5.43:1 |
 | Comparison table header (2 cols) | `#64748B` on `#F4F4F6` | 4.33:1 (fail) | `#475569` | 6.90:1 |
 | Footer column labels + copyright | `#64748B` on navy `#0B0F19` | 4.02:1 (fail) | `#94A3B8` | 7.47:1 |
@@ -41,13 +41,25 @@ The large decorative uses of rose and teal (36–44px numerals, gradients) were 
 Figma's AI pass drifted from the real copy in a few places. Everywhere it did, this build uses the verbatim live-site text instead:
 
 - Footer legal line: live site is `© 2026 JoeDoe. Patent pending.` — the Figma draft had `Please pending.`
-- Hero tag: live site shows `Now in Closed Beta · Patent Pending` — the draft invented `HOW JD IS CLOSING THE GAP`
+- Hero tag: the draft invented `HOW JD IS CLOSING THE GAP`; this build uses the real tag, now `Patent Pending`
 - Card caption: live site is `Issued as a virtual card — add it to Apple Wallet or Google Wallet in seconds.` — the draft had an unrelated, slightly garbled line
-- Three-step section: live copy is `Employee Taps / JoeDoe Decides / One Clean Approval` and closes with `Agentic Finance: JoeDoe is not a card wrapper — it's an intelligent decision engine built to never say no.` — the draft substituted different labels and a different closing line
+- Three-step section: live copy is `Employee Taps / JoeDoe Decides / One Clean Approval` and closes with `JoeDoe is not a card wrapper. It is a real-time policy engine between the employer's rules and the employee's checkout.` — the draft substituted different labels and a different closing line
 - Comparison table row/column labels (`Transaction`, `Administration`, `User privacy`) and cell values (`Never declines`, `Zero (automated)`, `High (privacy protected)`) — the draft paraphrased these
 - Security section: live copy specifies `AES-256 + TLS 1.2+`, not `1.3+`
 - Footer "Company" column: live site lists only Partners & Investors and Contact — the draft added an invented "Careers" link, which is removed here
 - Market Opportunity footnote citations on the Partners page are reproduced as they appear live (`Straits Research, 2024`; `SBA, 2025`; `ezCater, 2024`; `Compt Benchmark, 2024`) rather than the different citation text in the draft
+
+## Copy: aligned with the investor deck
+
+Site copy must not contradict the investor deck. When editing copy on any page (including meta descriptions and the legal pages):
+
+- **Status:** JoeDoe is pre-launch. Don't say or imply it is live or in beta today; say "pre-launch" or "preparing for closed beta." No specific launch quarters or dates.
+- **Roadmap:** stages are labelled Now / Next / Later, without dates. Unannounced products are not mentioned before an NDA.
+- **Financials:** no revenue projections and no interchange percentages. Issuer economics are described qualitatively only. Per-user pricing ($5 Core / $12 Premium) is public.
+- **Mechanism:** keep card-data handling and payment-rail detail general ("PCI-DSS compliant secure card data handling", "PCI-compliant infrastructure"); full technical detail is NDA-only.
+- **Claims:** avoid absolutes such as "100%" or "guaranteed"; prefer "designed to never decline" and "hard caps on employer spend."
+- **Positioning:** "JoeDoe is not a card wrapper. It is a real-time policy engine between the employer's rules and the employee's checkout." The planned intelligence layer is fraud and anomaly detection and policy optimization.
+- **Partners:** don't name any BaaS provider or bank.
 
 ## Assets
 
